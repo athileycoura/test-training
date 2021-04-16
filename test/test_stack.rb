@@ -35,4 +35,15 @@ class TestStack < Test::Unit::TestCase
     assert_equal(expected_result, actual_result)
     assert_equal(is_empty, true)
   end
+
+  def test_should_return_nil_when_popping_an_empty_stack
+    # given
+    stack = Stack.new
+    # when
+    actual_result = stack.pop
+    # then
+    expected_result = nil
+
+    assert_equal(expected_result, actual_result)
+  end
 end
