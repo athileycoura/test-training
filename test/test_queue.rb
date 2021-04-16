@@ -3,7 +3,7 @@ require 'test/unit'
 
 class TestQueue < Test::Unit::TestCase
 
-  def test_should_return_two_when_adding_two_in_the_first_place_in_the_queue
+  def test_should_return_two_when_adding_two_in_the_first_position_in_the_queue
     # given
     number = 2
     queue = Queue.new
@@ -14,7 +14,28 @@ class TestQueue < Test::Unit::TestCase
     expected_result = number
 
     assert_equal(expected_result, actual_result)
+  end
 
+  def test_should_return_two_when_adding_two_in_the_last_position_in_the_queue
+    #given
+    number = 10
+    second_number = 3
+    third_number = 2
+
+    queue = Queue.new
+    queue.enqueue(number)
+    queue.enqueue(second_number)
+    queue.enqueue(third_number)
+    #when
+    queue.dequeue
+    queue.dequeue
+    actual_result = queue.dequeue
+    is_empty = queue.empty?
+    #then
+    expected_result = third_number
+
+    assert_equal(expected_result, actual_result)
+    assert_equal(is_empty, true)
   end
 end
 
