@@ -92,6 +92,19 @@ class TestCalculator < Test::Unit::TestCase
     assert_equal(expected_result, actual_result)
   end
 
+  def test_should_return_negative_two_when_substracting_positive_two_and_positive_four
+    #given
+    first_number = 2
+    second_number = 4
+    calculator = Calculator.new
+    #when
+    actual_result = calculator.substract(first_number, second_number)
+    expected_result = -2
+    #then
+    assert_equal(expected_result, actual_result)
+
+  end
+
 end
 
 #quando dois numeros são positivos e o primeiro é maior que o segundo
