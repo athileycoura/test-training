@@ -2,7 +2,6 @@ require_relative '../queue/queue'
 require 'test/unit'
 
 class TestQueue < Test::Unit::TestCase
-
   def test_should_return_two_when_adding_two_in_the_first_position_in_the_queue
     # given
     number = 2
@@ -37,8 +36,16 @@ class TestQueue < Test::Unit::TestCase
     assert_equal(expected_result, actual_result)
     assert_equal(is_empty, true)
   end
+
+  def test_should_return_nil_when_queue_is_empty
+    #given
+    queue = Queue.new
+    #when
+    actual_result = queue.dequeue
+    #then
+    expected_result = nil
+
+    assert_equal(expected_result, actual_result)
+  end
 end
 
-# checar se a primeira pessoa que entrou na fila, tá sendo a primeira pessoa que tá saindo.
-# checar se a ultima pessoa que entrou na fila, é a ultima pessoa que tá saindo.
-# checar se a fila tá vazia e retornar nulo.
