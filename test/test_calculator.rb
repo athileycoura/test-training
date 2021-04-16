@@ -37,9 +37,21 @@ class TestCalculator < Test::Unit::TestCase
     expected_result = 10
     assert_equal(expected_result, actual_result)
   end
+
+  def should_return_negative_ten_when_adding_negative_twenty_and_positive_ten
+    #given
+    first_number = -20
+    second_number = 10
+    calculator. Calculator.new
+
+    #when
+    actual_result = calculator.sum(first_number, second_number)
+    #then
+    expected_result = -10
+    assert_equal(expected_result, actual_result)
+  end
 end
 
-# deve retornar positivo quando somado dois numeros positivos
-# deve retornar uma exceção com mensagem de erro quando um dos valores não é um inteiro
 # deve retornar o sinal do maior numero quando somado um negativo com um positivo
 # a ordem dos fatores nao altera o produto
+# deve retornar uma exceção com mensagem de erro quando um dos valores não é um inteiro
