@@ -2,6 +2,7 @@ require_relative '../calculator/calculator'
 require 'test/unit'
 
 class TestCalculator < Test::Unit::TestCase
+  # testing sum
   def test_should_return_negative_two_when_adding_negative_one_and_negative_one
     #given
     first_number = -1
@@ -38,11 +39,11 @@ class TestCalculator < Test::Unit::TestCase
     assert_equal(expected_result, actual_result)
   end
 
-  def should_return_negative_ten_when_adding_negative_twenty_and_positive_ten
+  def test_should_return_negative_ten_when_adding_negative_twenty_and_positive_ten
     #given
     first_number = -20
     second_number = 10
-    calculator. Calculator.new
+    calculator = Calculator.new
 
     #when
     actual_result = calculator.sum(first_number, second_number)
@@ -50,8 +51,39 @@ class TestCalculator < Test::Unit::TestCase
     expected_result = -10
     assert_equal(expected_result, actual_result)
   end
+
+  def test_should_return_five_when_adding_positive_two_and_positive_three_and_vice_versa
+    #given
+    first_number = 2
+    second_number = 3
+    calculator = Calculator.new
+
+    #when
+    first_result = calculator.sum(first_number, second_number)
+    second_result = calculator.sum(second_number, first_number)
+
+    #then
+    assert_equal(first_result, second_result)
+  end
+
+  #testing substraction
+
+  def test_should_return_zero_when_substracting_negative_two_and_negative_two
+    #given
+    first_number = -2
+    second_number = -2
+    calculator = Calculator.new
+    #when
+    actual_result = calculator.substract(first_number, second_number)
+    expected_result = 0
+    #then
+    assert_equal(expected_result, actual_result)
+  end
 end
 
-# deve retornar o sinal do maior numero quando somado um negativo com um positivo
-# a ordem dos fatores nao altera o produto
-# deve retornar uma exceção com mensagem de erro quando um dos valores não é um inteiro
+#quando dois numeros são negativos
+#quando dois numeros são positivos e o primeiro é maior que o segundo
+#quando dois numeros são positivos e o primeiro é maior que o segundo
+#quando o primeiro número é zero
+#quando o segundo número é zero
+#
