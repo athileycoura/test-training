@@ -46,4 +46,17 @@ class TestStack < Test::Unit::TestCase
 
     assert_equal(expected_result, actual_result)
   end
+
+  def test_should_return_two_when_popping_stack
+    # given
+    number = 2
+    stack = Stack.new
+    stack.push(number)
+    # when
+    actual_result = stack.pop
+    # then
+    expected_result = number
+
+    assert_equal(expected_result, actual_result)
+  end
 end
