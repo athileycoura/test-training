@@ -66,9 +66,9 @@ class TestCalculator < Test::Unit::TestCase
     assert_equal(first_result, second_result)
   end
 
-  #testing substraction
-  # -2 - (-2) = 0
-  def test_should_return_zero_when_substracting_negative_two_and_negative_two
+  #testing subtraction
+
+  def test_should_return_zero_when_subtracting_negative_two_and_negative_two
     #given
     first_number = -2
     second_number = -2
@@ -80,7 +80,7 @@ class TestCalculator < Test::Unit::TestCase
     assert_equal(expected_result, actual_result)
   end
 
-  def test_should_return_two_when_substracting_positive_four_and_positive_two
+  def test_should_return_two_when_subtracting_positive_four_and_positive_two
     #given
     first_number = 4
     second_number = 2
@@ -92,7 +92,7 @@ class TestCalculator < Test::Unit::TestCase
     assert_equal(expected_result, actual_result)
   end
 
-  def test_should_return_negative_two_when_substracting_positive_two_and_positive_four
+  def test_should_return_negative_two_when_subtracting_positive_two_and_positive_four
     #given
     first_number = 2
     second_number = 4
@@ -104,7 +104,7 @@ class TestCalculator < Test::Unit::TestCase
     assert_equal(expected_result, actual_result)
   end
 
-  def test_should_return_positive_two_when_substracting_zero_and_negative_two
+  def test_should_return_positive_two_when_subtracting_zero_and_negative_two
     #given
     first_number = 0
     second_number = -2
@@ -116,9 +116,15 @@ class TestCalculator < Test::Unit::TestCase
     assert_equal(expected_result, actual_result)
   end
 
-
+  def test_should_return_two_when_subtracting_positive_two_and_zero
+    #given
+    first_number = 2
+    second_number = 0
+    calculator = Calculator.new
+    #when
+    actual_result = calculator.substract(first_number, second_number)
+    expected_result = 2
+    #then
+    assert_equal(expected_result, actual_result)
+  end
 end
-
-#quando o primeiro número é zero
-#quando o segundo número é zero
-#
