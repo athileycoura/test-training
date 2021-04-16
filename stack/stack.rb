@@ -10,4 +10,12 @@ class Stack
   def peek
     @stack.last
   end
+
+  def pop
+    @stack.pop
+  end
+
+  def empty?
+    @stack.empty?
+  end
 end

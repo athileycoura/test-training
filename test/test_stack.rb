@@ -13,4 +13,26 @@ class TestStack < Test::Unit::TestCase
     expected_result = number
     assert_equal(expected_result, actual_result)
   end
+
+  def test_should_return_two_as_last_element_when_adding_two_first
+    # given
+    number = 2
+    second_number = 3
+    third_number = 10
+    stack = Stack.new
+    # when
+    stack.push(number)
+    stack.push(second_number)
+    stack.push(third_number)
+    # then
+    stack.pop
+    stack.pop
+    actual_result = stack.pop
+    is_empty = stack.empty?
+
+    expected_result = number
+
+    assert_equal(expected_result, actual_result)
+    assert_equal(is_empty, true)
+  end
 end
