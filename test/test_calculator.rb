@@ -74,7 +74,7 @@ class TestCalculator < Test::Unit::TestCase
     second_number = -2
     calculator = Calculator.new
     #when
-    actual_result = calculator.substract(first_number, second_number)
+    actual_result = calculator.subtract(first_number, second_number)
     expected_result = 0
     #then
     assert_equal(expected_result, actual_result)
@@ -86,7 +86,7 @@ class TestCalculator < Test::Unit::TestCase
     second_number = 2
     calculator = Calculator.new
     #when
-    actual_result = calculator.substract(first_number, second_number)
+    actual_result = calculator.subtract(first_number, second_number)
     expected_result = 2
     #then
     assert_equal(expected_result, actual_result)
@@ -98,7 +98,7 @@ class TestCalculator < Test::Unit::TestCase
     second_number = 4
     calculator = Calculator.new
     #when
-    actual_result = calculator.substract(first_number, second_number)
+    actual_result = calculator.subtract(first_number, second_number)
     expected_result = -2
     #then
     assert_equal(expected_result, actual_result)
@@ -110,7 +110,7 @@ class TestCalculator < Test::Unit::TestCase
     second_number = -2
     calculator = Calculator.new
     #when
-    actual_result = calculator.substract(first_number, second_number)
+    actual_result = calculator.subtract(first_number, second_number)
     expected_result = 2
     #then
     assert_equal(expected_result, actual_result)
@@ -122,9 +122,10 @@ class TestCalculator < Test::Unit::TestCase
     second_number = 0
     calculator = Calculator.new
     #when
-    actual_result = calculator.substract(first_number, second_number)
+    actual_result = calculator.subtract(first_number, second_number)
     expected_result = 2
     #then
     assert_equal(expected_result, actual_result)
   end
+
 end

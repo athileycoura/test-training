@@ -3,7 +3,7 @@ class Calculator
     first_number + second_number
   end
 
-  def substract(first_number, second_number)
+  def subtract(first_number, second_number)
     first_number - second_number
   end
 end
