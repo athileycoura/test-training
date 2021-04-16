@@ -67,7 +67,7 @@ class TestCalculator < Test::Unit::TestCase
   end
 
   #testing substraction
-
+  # -2 - (-2) = 0
   def test_should_return_zero_when_substracting_negative_two_and_negative_two
     #given
     first_number = -2
@@ -79,9 +79,21 @@ class TestCalculator < Test::Unit::TestCase
     #then
     assert_equal(expected_result, actual_result)
   end
+
+  def test_should_return_two_when_substracting_positive_four_and_positive_two
+    #given
+    first_number = 4
+    second_number = 2
+    calculator = Calculator.new
+    #when
+    actual_result = calculator.substract(first_number, second_number)
+    expected_result = 2
+    #then
+    assert_equal(expected_result, actual_result)
+  end
+
 end
 
-#quando dois numeros são negativos
 #quando dois numeros são positivos e o primeiro é maior que o segundo
 #quando dois numeros são positivos e o primeiro é maior que o segundo
 #quando o primeiro número é zero
