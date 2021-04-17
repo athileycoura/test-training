@@ -164,4 +164,16 @@ class TestCalculator < Test::Unit::TestCase
     #then
     assert_equal(expected_result, actual_result)
   end
+
+  def test_should_return_zero_when_multiplying_positive_five_and_zero
+    #given
+    first_number = 5
+    second_number = 0
+    calculator = Calculator.new
+    #then
+    actual_result = calculator.multiply(first_number, second_number)
+    expected_result = 0
+    #then
+    assert_equal(expected_result, actual_result)
+  end
 end
