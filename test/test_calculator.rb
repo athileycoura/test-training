@@ -139,4 +139,17 @@ class TestCalculator < Test::Unit::TestCase
     #then
     assert_equal(expected_result, actual_result)
   end
+
+  #testing multiplication
+  def test_should_return_four_when_multiplying_positive_two_and_positive_two
+    #given
+    first_number = 2
+    second_number = 2
+    calculator = Calculator.new
+    #when
+    actual_result = calculator.multiply(first_number, second_number)
+    expected_result = 4
+    #then
+    assert_equal(expected_result, actual_result)
+  end
 end
