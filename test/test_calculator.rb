@@ -188,4 +188,18 @@ class TestCalculator < Test::Unit::TestCase
     #then
     assert_equal(expected_result, actual_result)
   end
+
+  def test_should_return_posivite_ten_when_multiplying_positive_five_and_positive_two_and_vice_versa
+    #given
+    first_number = 5
+    second_number = 2
+    calculator = Calculator.new
+
+    #when
+    first_result = calculator.multiply(first_number, second_number)
+    second_result = calculator.multiply(second_number, first_number)
+
+    #then
+    assert_equal(first_result, second_result)
+  end
 end
